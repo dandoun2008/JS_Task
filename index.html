@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Website</h1>
+
+
+<!--    ***** TASK *****
+
+- Create a website
+- Website should have:
+- Label: Number
+- Input
+- Button: CheckNumber
+
+- Functionality: Page should check if a number is even or odd
+- Alert Message: 10 is even number
+- Alet Message: 11 is odd number
+-->
+
+<form action="">
+    <label for="">Number: </label>
+    <input id="input-box" type="text">
+    <input type="button" value="Check Number" onclick="isEven()">
+    <!-- WORKFLOW: user clicks on Check Number button
+     onclick attribute will be called
+     then it will trigger isEven() function -->
+</form>
+
+<!-- Writing the js code to check if the number is even or odd -->
+<script>
+    // internal js
+    //isEven function should be called ONLY when user clicks on Check Number button
+    function isEven(){
+        /*
+        We have some document methods that we must use to get the elements
+        For example: querySelector, getElementById(id), getElementByClass(class)
+        documrnt.getElementById('input-box'); -> returns the matching element
+        */
+
+
+        //const num = 10;
+        const targetElement = document.getElementById('input-box'); //<input id="input-box" type+"text">
+        console.log(`TARGET: ${targetElement}`);
+        //To get the value of the input, we must use value keyword
+        const num = document.getElementById('input-box').value;
+        console.log(`NUMBER: ${num}`);
+        if(num%2==0){
+            alert(num + " is even")
+        }else{
+            alert(num + " is odd")
+            // document.write('Stop clicking')
+        }
+    }
+
+</script>
+    
+</body>
+</html>
